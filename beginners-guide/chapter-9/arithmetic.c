@@ -47,9 +47,16 @@ int main()
     seriesMinutes = (seasons * episodes * minutes) % 60;
     hoursPerDay = seriesHours / days;
 
-    printf("You spent a total of %d hours and %d minutes watching the series, with a media of %.2f hours per day", seriesHours, seriesMinutes, hoursPerDay);
+    printf("You spent a total of %d hours and %d minutes watching the series, with a media of %.2f hours per day\n", seriesHours, seriesMinutes, hoursPerDay);
 
-    return 0;
+    /*
+    There is an interesting thing that C does, the assignment operator also have an assosiation direction,
+    it goes from right to left, so, the next expression is valid:
+    */
+    int i, h;
+    i = 5 * (h = 2);
+
+    printf("i equals %d, h equals %d", i, h);
 
     return 0;
 }
