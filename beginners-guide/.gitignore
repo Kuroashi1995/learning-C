@@ -1,2 +1,4 @@
 # vscode folder
 .vscode
+# executables
+*.exe
